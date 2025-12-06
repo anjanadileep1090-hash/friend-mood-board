@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FriendFolk - Vampire Edition</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,400&family=Nosifer&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Crimson Pro', 'serif'],
+              display: ['Nosifer', 'cursive'],
+              hand: ['Nosifer', 'cursive'],
+            },
+            colors: {
+              paper: '#050505',     // Main background (Void Black)
+              coffin: '#160a0a',    // Card/Surface background (Dark Red-Black)
+              blood: '#8a0303',     // Primary Action
+              crimson: '#660000',   // Darker Red
+              bone: '#e5e5e5',      // Main Text
+              ash: '#9ca3af',       // Muted Text
+              parchment: '#dcd0c0', // Sticky notes background
+              gold: '#c5a059',      // Accents
+            },
+            animation: {
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'float': 'float 6s ease-in-out infinite',
+              'flicker': 'flicker 3s linear infinite',
+              'fade-in-up': 'fadeInUp 0.6s ease-out forwards',
+              'enter-card': 'fadeInUp 0.5s ease-out forwards',
+              'bat-fly-1': 'batFly1 15s linear infinite',
+              'bat-fly-2': 'batFly2 20s linear infinite',
+              'bat-fly-3': 'batFly3 12s linear infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              },
+              flicker: {
+                '0%, 100%': { opacity: '1' },
+                '50%': { opacity: '0.7' },
+                '25%, 75%': { opacity: '0.85' },
+              },
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              batFly1: {
+                '0%': { transform: 'translate(-10vw, 10vh) scale(0.5)' },
+                '100%': { transform: 'translate(110vw, 40vh) scale(0.5)' }
+              },
+              batFly2: {
+                 '0%': { transform: 'translate(110vw, 60vh) scale(0.7) scaleX(-1)' },
+                 '100%': { transform: 'translate(-10vw, 20vh) scale(0.7) scaleX(-1)' }
+              },
+              batFly3: {
+                 '0%': { transform: 'translate(-10vw, 80vh) scale(0.3)' },
+                 '50%': { transform: 'translate(50vw, 90vh) scale(0.3)' },
+                 '100%': { transform: 'translate(110vw, 70vh) scale(0.3)' }
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #050505;
+        color: #e5e5e5;
+      }
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
